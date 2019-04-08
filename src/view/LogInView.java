@@ -38,7 +38,7 @@ public class LogInView extends JFrame {
         emailLabel = new JLabel("Email: ");
         passwordLabel = new JLabel("Password: ");
         addAttributes();
-        addActionListeners();
+        //addActionListeners();
         addItemsToFrame();
     }
     
@@ -51,6 +51,7 @@ public class LogInView extends JFrame {
         userPassword.setBounds(130, 80, 100, 20);
     }
 
+    /*
     private void addActionListeners() {
         jButton.addActionListener(new ActionListener() {
             @Override
@@ -59,6 +60,10 @@ public class LogInView extends JFrame {
             }
         });
     }
+    */
+    public void setSubmitButtonListener(ActionListener listener) {
+        jButton.addActionListener(listener);
+    }
 
     private void addItemsToFrame() {
         jFrame.add(emailLabel);
@@ -66,5 +71,12 @@ public class LogInView extends JFrame {
         jFrame.add(userMail);
         jFrame.add(userPassword);
         jFrame.add(jButton);
+    }
+    
+    public String getMail() {
+        return userMail.getText();
+    }
+    public char[] getPassword() {
+        return userPassword.getPassword();
     }
 }

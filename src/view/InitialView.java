@@ -5,6 +5,7 @@
  */
 package view;
 
+import main.LogIn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -37,7 +38,8 @@ public class InitialView {
         loginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                new LogInView();
+                //new LogInView();
+                new LogIn();
             }
         });
         signupBtn.addActionListener(new ActionListener() {

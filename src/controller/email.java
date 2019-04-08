@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package controller;
 
 /**
  *
  * @author User
  */
-
-import view.InitialView;
-
-public class Main {
-    public static void main(String[] args) {
-        new InitialView();
-    }
+class email {
+    
 }
