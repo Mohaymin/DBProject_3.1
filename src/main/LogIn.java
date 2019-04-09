@@ -13,10 +13,12 @@ package main;
 
 import view.LogInView;
 import model.DatabaseConnectionModel;
+import controller.LogInController;
 
 public class LogIn {
     public LogIn() {
         DatabaseConnectionModel model = new DatabaseConnectionModel();
         LogInView logInView = new LogInView();
+        LogInController controller = new LogInController(logInView, model);
     }
 }

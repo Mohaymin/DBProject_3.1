@@ -14,3 +14,5 @@ VALUES ('abc@abc.com', 'abc123', 'agent'),
 
 SELECT * FROM EMPLOYEE;
 
+SELECT * FROM EMPLOYEE WHERE email='abc@abc.com' AND password='abc123';
+

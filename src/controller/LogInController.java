@@ -42,11 +42,11 @@ public class LogInController {
         @Override
         public void actionPerformed(ActionEvent ae) {
             try {
-                model.makeQuesry(
+                resultSet = model.makeQuesry(
                         "Select * FROM EMPLOYEE WHERE "
-                        + "email="+email
-                        + " AND "
-                        + " PASSWORD="+password+';'
+                        + "email='"+email
+                        + "' AND "
+                        + " password='"+password+"';"
                 );
             } catch (Exception e) {
                 e.printStackTrace();
@@ -56,7 +56,7 @@ public class LogInController {
                     JOptionPane.showMessageDialog(null, "ERROR!");
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "Successful");
+                    JOptionPane.showMessageDialog(null, "Successful <3");
                 }
             }
         }
